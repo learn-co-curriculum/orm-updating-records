@@ -101,7 +101,7 @@ WHERE name="99 Problems";
 Let's put it all together using our SQLite3-Ruby gem magic. Remember, in this example, we assume our database connection is stored in `DB[:conn]`. 
 
 ```ruby
-sql = "UPDATE songs SET album=#{ninety_nine_problems.album" WHERE name = ?"
+sql = "UPDATE songs SET album=#{ninety_nine_problems.album}" WHERE name = ?"
 
 DB[:conn].execute(sql, ninety_nine_problems.name)
 ```
@@ -347,5 +347,3 @@ end
 ```
 
 Great, now our `#save` method will never create duplicate records!
-
-<a href='https://learn.co/lessons/orm-updating-records' data-visibility='hidden'>View this lesson on Learn.co</a>
